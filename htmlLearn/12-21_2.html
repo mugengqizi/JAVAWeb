@@ -1,45 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 </head>
 <body>
-    <a href="https://www.bilibili.com/video/BV162kyYBE4E/?spm_id_from=333.1007.tianma.1-1-1.click&vd_source=61b36fa41fd31af5bb44a8319b9cc0fa">bilibili</a>
-    
-    <p><a href="https://www.runoob.com" target="iframe_a">菜鸟教程</a></p>
-    <ul>
-        <li>ul</li>
-        <li>111</li>
-        <li>222</li>
-        <li>333</li>
-    </ul>
-    <ol>
-        <li>ol</li>
-        <li>111</li>
-        <li>222</li>
-        <li>333</li>
-    </ol>
-    <dl>
-        <dt>dl</dt>
-        <dd>111</dd>
-        <dd>222</dd>
-        <dd>333</dd>
-    </dl>
-    <table>
-        <tr>
-            <th>111</th>
-            <th>222</th>
-        </tr>
-        <tr>
-            <td>333</td>
-        
-        </tr>
-        <tr>
-            <td>444</td>
-            <td>555</td>
-        </tr>
-    </table>
+  <div id="app">
+    <el-button @click="visible = true">Button</el-button>
+    <el-dialog :visible.sync="visible" title="Hello world">
+      <p>Try Element</p>
+    </el-dialog>
+  </div>
 </body>
+  <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function() {
+        return { visible: false }
+      }
+    })
+  </script>
 </html>
+
+
+Resources

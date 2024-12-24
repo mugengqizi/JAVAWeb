@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>
+        hello
+        <input type="file" name="file">>
+    </label>
+    <hr>
+    性别：
+    <label>
+        <input type="radio" name="sex">男
+    </label>
+    <label>
+        <input checked type="radio" name="sex">女
+    </label>
+    <hr>
+    <form action="a.php">
+        <label>
+            <input type="email">邮箱    
+        </label>
+        <hr>
+        <p>
+            <input type="number" max="10">
+        </p>
+        <p>
+            <input type="range" name="" id="">
+        </p>
+        <p>
+            <input type="date" name="" id="">
+            <input type="datetime-local">
+            <input type="week">
+        </p>
+        <p>
+            <input type="color">
+        </p>
+        <button>提交</button>
+        <form action="a.php" autocomplete="on">
+            <br>姓名：<input placeholder="请输入用户名" type="text" name="uname2" >
+            <hr>
+            邮箱：<input type="email" required>
+            <hr>
+            <button>提交</button>
+        </form>
+    </form>
+    <label>
+        <input type="checkbox" name="hobby" value="篮球" checked/>:篮球
+        <input type="checkbox" name="hobby" value="足球"/>:足球
+        <input type="checkbox" name="hobby" value="羽毛球"/>:羽毛球
+    </label>
+    <label for="123">请选择一个选项</label>
+    <select name="hello" id="123">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    <audio controls src="../../../../yingyong/music/音乐下载/我们 - 乐柠组合.mp3" ></audio>
+</body>
+</html>

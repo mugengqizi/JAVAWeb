@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .paly{
+            display: flex;
+            float: left;
+        }
+        .wrap{
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        .wrap a{
+            text-decoration: none;
+            margin-right: 80px;
+            color: black;
+        }
+        .wrap a:hover{
+            color: aquamarine;
+        }
+
+        .rowSong{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .song{
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+        .song img{
+            width: 100px;
+            height: 100px;
+        }
+        .song div{
+            justify-content: center;
+            margin-left: 10px;
+        }
+        .song div p:first-child{
+            margin-bottom: -20px;
+            font-size: 16px;
+        }
+        .song div p:first-child+p{
+            font-size: 14px;
+            color: gray;
+        }
+        .song>p{
+            margin-left: 50px;
+            font-size: 12px;
+            color: gray;
+        }
+    </style>
+
+    
+</head>
+
+<body>
+    <div style="text-align: center; background-color: azure; margin-bottom: 50px;">
+        <p style="font-size: 20px; font-weight: 600;">新歌首发</p>
+        <div>
+            <button class="paly">播放全部</button>
+            <ul class="wrap">
+                <li><a href="#">最新</a></li>
+                <li><a href="#">内地</a></li>
+                <li><a href="#">港台</a></li>
+                <li><a href="#">欧美</a></li>
+                <li><a href="#">韩国</a></li>
+                <li><a href="#">日本</a></li>
+            </ul>
+        </div>
+        <div>
+            <table style="width: 100%;">
+                <tr class="rowSong">
+                    <td class="song">
+                        <img src="imgs/1.jpg" alt="">
+                        <div>
+                            <p>No Fake Love</p>
+                            <p>谢可寅</p>
+                        </div>
+                        <p>03:16</p>
+                    </td>
+                    <td class="song">
+                        <img src="imgs/2.jpg" alt="">
+                        <div>
+                            <p>No Fake Love</p>
+                            <p>谢可寅</p>
+                        </div>
+                        <p>03:16</p>
+                    </td>
+                    <td class="song">
+                        <img src="imgs/3.jpg" alt="">
+                        <div>
+                            <p>No Fake Love</p>
+                            <p>谢可寅</p>
+                        </div>
+                        <p>03:16</p>
+                    </td>
+                </tr>
+                <tr class="rowSong">
+                    <td class="song">
+                        <img src="imgs/4.jpg" alt="">
+                        <div>
+                            <p>No Fake Love</p>
+                            <p>谢可寅</p>
+                        </div>
+                        <p>03:16</p>
+                    </td>
+                    <td class="song">
+                        <img src="imgs/5.jpg" alt="">
+                        <div>
+                            <p>No Fake Love</p>
+                            <p>谢可寅</p>
+                        </div>
+                        <p>03:16</p>
+                    </td>
+                    <td class="song">
+                        <img src="imgs/6.jpg" alt="">
+                        <div>
+                            <p>No Fake Love</p>
+                            <p>谢可寅</p>
+                        </div>
+                        <p>03:16</p>
+                    </td>
+                </tr>
+                <tr class="rowSong">
+                    <td class="song">
+                        <img src="imgs/7.jpg" alt="">
+                        <div>
+                            <p>No Fake Love</p>
+                            <p>谢可寅</p>
+                        </div>
+                        <p>03:16</p>
+                    </td>
+                    <td class="song">
+                        <img src="imgs/8.jpg" alt="">
+                        <div>
+                            <p>No Fake Love</p>
+                            <p>谢可寅</p>
+                        </div>
+                        <p>03:16</p>
+                    </td>
+                    <td class="song">
+                        <img src="imgs/9.jpg" alt="">
+                        <div>
+                            <p>No Fake Love</p>
+                            <p>谢可寅</p>
+                        </div>
+                        <p>03:16</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

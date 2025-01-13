@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1，flex
+        2,上下padding相等
+        3,height == line-height
+        4，定位
+            top50%,margin-top自身高度的负一半
+        5，图文混排，垂直居中
+            (行内块元素，行内混排的时候，垂直居中)
+            1，行内块，vertical-align: middle;
+            2，如果图片很小，会有偏差(配合相对定位微调)
+    -->
+        <style>
+            .fa{
+                height: 100px;
+                background-color: pink;
+                position: relative;
+            }
+            .fa button{
+                height: 30px;
+
+                position: absolute;
+                top: 50%;
+                margin-top: -15px;
+                /* top: 35px; */
+            }
+        </style>
+    <div class="fa">
+        <button>按钮</button>
+    </div>
+    <hr>
+    <style>
+        .fa2{background-color: pink;}
+        .fa2 img{vertical-align: middle;height: 20px;}
+    </style>
+    <div class="fa2">
+        <img src="./imgs/logo.png" alt="">
+        小米官网
+    </div>
+</body>
+</html>

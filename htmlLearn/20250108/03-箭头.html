@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 字面量定义
+        function f1(){
+            console.log('i am f1');
+        }
+        f1();
+        window.f1();
+        console.log(window);
+        //变量定义
+        let f2 = function(){
+
+        }
+        /**
+         * 箭头函数
+         * 基于变量定义，全是匿名的
+         */ 
+        //无参，无返回值
+        let f3 = ()=>{
+            console.log('i am f3 arrow');
+        }
+        f3();
+    </script>
+    <script>
+        console.log('==参数==');
+        let f100 = (a,b)=>{
+            console.log('a+b=',a+b);
+        }
+        f100('吴涛',666);
+        let f200 = a=>{
+            console.log('a',a);
+        }
+        f200(888)
+
+        console.log("===返回值===");
+        let f300 = ()=>{
+            console.log('i am f300');
+            return "鑫峰";
+        }
+        f300();
+        console.log(f300());
+        console.log('===return简写==');
+        f400 = num=>num*2;
+        console.log(f400(5));//10
+        console.log(f400(6));
+
+        
+    </script>
+</body>
+</html>

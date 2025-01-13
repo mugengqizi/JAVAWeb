@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .t1 {
+      color: #000;
+      font-size: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+    }
+    .t2{
+      color: #f00;
+      font-size: 40px;
+      width: 200px;
+      height: 200px;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="t1"  id="tt">Hello World!</div>
+</body>
+<script>
+  document.getElementById("tt").addEventListener("mousemove",function(e){
+    e.target.className="t2"
+  })
+  document.getElementById("tt").addEventListener("mouseout",function(e){
+    e.target.className="t1"
+  })
+</script>
+</html>

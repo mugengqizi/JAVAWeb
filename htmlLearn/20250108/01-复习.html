@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            console.log(document.querySelector('#i1'));
+        }
+        
+    </script>
+</head>
+<body>
+    <button onclick="f1()">按钮1</button>
+    <button onclick="alert(666)">按钮2</button>
+    <button onclick="alert('清除成功！')">清除缓存</button>
+    <hr>
+    <input type="text" onchange="c1()" name="" id="">
+    <script>
+        function f1(){
+            // bom 
+            // browser object model
+            // element-ui 
+            alert(123)
+        }
+        // 
+        console.log(f1);
+
+        function c1(){
+            console.log('change!');
+        }
+    </script>
+    <hr>
+    组合快捷键：
+    <input id="i1" type="text">
+    <style>
+        .plane{
+            position: fixed;
+            top: 100px;
+        }
+    </style>
+    <button class="plane" id="plane">飞机</button>
+    <script>
+        document.querySelector('#i1').onkeydown=function(e){
+            console.log(e);
+        }
+        document.g
+        document.onmousemove=function(e){
+            // console.log(e.clientX);
+            // //语法糖
+            // plane.style.left = e.clientX+'px';
+        }
+    </script>
+    事件冒泡：性能优化？
+    <hr>
+    <div id="fa" style="border: 2px solid red;">
+        <button>移动</button>
+        <button>删除</button>
+    </div>
+    <script>
+        fa.onclick=function(e){
+            console.log(e.target);
+            console.log(e.target.innerText);
+        }
+    </script>
+</body>
+</html>

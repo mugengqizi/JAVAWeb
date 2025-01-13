@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .form span{
+      color: rgb(255, 17, 17);
+    }
+  </style>
+</head>
+<body>
+    <form class="form" onsubmit="return chenck()">
+      <h1>表单验证示例</h1>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;用户名：<input type="text" id="username"><span id="username_msg"></span></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：<input type="password" id="password"><span id="password_msg"></span></p>
+      <p>重复密码：<input type="password" id="repassword"><span id="repassword_msg"></span></p>
+      <p>常用住址：<input type="text" id="address"><span id="address_msg"></span></p>
+      <input type="submit" value="提交">
+    </form>
+</body>
+<script>
+  let username = document.getElementById("username");
+  let panduan1=false,panduan2=false,panduan3=false,panduan4=false;
+  username.addEventListener("blur", function(){
+    if(username.value.length < 6){
+      document.getElementById("username_msg").innerHTML = "* 用户名不能为空";
+    }else{
+      document.getElementById("username_msg").innerHTML = "<b style='color:green;'>√</b>";
+    
+      panduan1=true;
+    }
+  })
+  let password = document.getElementById("password");
+  password.addEventListener("blur", function(){
+    if(password.value.length < 6){
+      document.getElementById("password_msg").innerHTML = "* 密码不能为空";
+    }else{
+      document.getElementById("password_msg").innerHTML = "<b style='color:green;'>√</b>";
+      panduan2=true;
+      
+    }
+  })
+  let repassword = document.getElementById("repassword");
+  repassword.addEventListener("blur", function(){
+    if(repassword.value != password.value){
+      document.getElementById("repassword_msg").innerHTML = "* 两次密码不一致";
+    }else{
+      document.getElementById("repassword_msg").innerHTML = "<b style='color:green;'>√</b>";
+      panduan3=true;
+      
+    }
+  })
+  let address = document.getElementById("address");
+  address.addEventListener("blur", function(){
+    if(address.value.length < 1){
+      document.getElementById("address_msg").innerHTML = "* 常用住址不能为空";
+    }else{
+      document.getElementById("address_msg").innerHTML = "<b style='color:green;'>√</b>";
+      panduan4=true;
+    }
+  })
+  function chenck(){
+    if(panduan1 && panduan2 && panduan3&&panduan4){
+      alert("注册成功");
+      return true;
+    }else{
+      alert("请检查输入");
+      return false;
+    }
+  }
+</script>
+</html>

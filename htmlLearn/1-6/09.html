@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="password" id="pwd" />
+  <button id="btn" >点击显示</button>
+</body>
+<script>
+  
+  function showPwd(th) {
+    let pwd=document.querySelector("#pwd");
+    if(pwd.type=="password"){
+      pwd.type="text"
+      th.innerHTML='点击隐藏'
+    }else{
+      pwd.type="password"
+      th.innerHTML='点击显示'
+    }
+  }
+  document.getElementById("btn").addEventListener("click",showPwd)
+</script>
+</html>

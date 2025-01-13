@@ -1,0 +1,24 @@
+*{padding: 0;margin: 0;}
+ul{list-style: none;}
+
+/* 定位 */
+.pf{position: fixed;}
+
+/* 原子类 */
+.fr{float: right;}
+/* margin */
+.mr20{margin-right: 20px;}
+
+.mb10{margin-bottom: 10px;}
+.mb15{margin-bottom: 15px;}
+.mb30{margin-bottom: 30px;}
+/* 对齐 */
+.tc{text-align: center;}
+.tr{text-align: right;}
+
+/* 字体样式 */
+.fn{font-weight: normal;}
+
+/* 字体大小 */
+.f14{font-size: 14px;}
+.f12{font-size: 12px;}

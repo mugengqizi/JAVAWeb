@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 加载动画 -->
+    <script src="js/animate.js"></script>
+    <script src="js/banner.js"></script>
+    <style>
+        *{
+            margin: 0;
+        }
+        .box{
+            width: 100vw;
+            height: 100vh;
+            padding-top:20px ;
+            background-color: aliceblue;
+            box-sizing: border-box  ;
+        }
+        .box .ul-box{
+            position: relative;
+            margin: auto;
+            width: 450px;
+            height: 230px;
+            overflow: hidden;
+            /* background-color: #ff00aa; */
+        }
+        .ul-box #img-ul{
+            position: absolute;
+            width: 400%;
+             /* 去除li样式 */
+             list-style: none; /* 移除列表项前的符号 */
+            padding-left: 0;
+            margin: 0
+        }
+        .ul-box #img-ul li{
+            background-color: rgb(202, 214, 225);
+            /* opacity: 0.2; */
+            width: 450px;
+            height: 230px;
+            float: left;
+           
+        }
+        .ul-box #img-ul li img{
+            width: 450px;
+            height: 230px;
+        }
+        #dot-ul{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            background-color: rgb(232, 234, 234);
+            opacity: 0.8;
+            list-style: none; /* 移除列表项前的符号 */
+            padding-left: 0;
+            margin: 0;
+            border-radius: 12px;
+            
+        }
+        #dot-ul li{
+            margin: 5px;
+            height:10px;
+            width: 10px;
+            border: 1px solid #ffffff;
+            border-radius: 50%;
+        }
+        .active{
+            background-color: #ffffff;
+        }
+        .un-active{
+            background-color: none;
+        }
+        /* 按钮 */
+        #left-btn,#right-btn{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: aliceblue;
+            opacity: 0.5;
+            border-radius: 5px;
+            color: rgb(66, 66, 56);
+            padding: 2px;
+        }
+        #left-btn{
+            left: 0;
+        }
+        #right-btn{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="ul-box" id="ul-box">
+            
+            <ul id="img-ul">
+                <li>
+                    <img src="imgs/3.1.png">
+                </li>
+                <li> <img src="imgs/3.2.png"></li>
+                <li> <img src="imgs/3.3.png"></li>
+            </ul>
+            <ul id="dot-ul">
+                <!-- <li class="active" > </li><li > </li><li > </li> -->
+            </ul>
+            <div id="left-btn"><</div>
+            <div id="right-btn">></div>
+        </div>
+    </div>
+</body>
+<script>
+  window.addEventListener('load', () => {
+  let timeGap = 20
+  let allTime = 500
+  let picWidth = 450
+  let playTimer = null //自动播放
+  let palyTime = 2000 + allTime
+  let currentIndex = 0 //当前播放
+  // 包裹盒子
+  let ulBox = document.getElementById('ul-box')
+  // 获取ul
+  let imgUlEl = document.getElementById('img-ul')
+  // 获取img ul下的li个数
+  let imgLiElList = imgUlEl.getElementsByTagName('li')
+  // 指示点 ul
+  let dotUlEl = document.getElementById('dot-ul')
+  // 创建知识点 li
+  for (let i = 0; i < imgLiElList.length; i++) {
+    // 创建元素
+    let liEl = document.createElement('li')
+    liEl.id = 'dotli-' + i
+    dotUlEl.appendChild(liEl)
+  }
+  // 克隆第一个图片
+  if (imgLiElList.length) {
+    let firstPicEl = imgLiElList[0]
+    let cloneEl = firstPicEl.cloneNode(true)
+    imgUlEl.appendChild(cloneEl)
+  }
+  // 获取指示点 li列表
+  let dotLiEllist = dotUlEl.getElementsByTagName('li')
+  //修改dot状态
+  function changeDot() {
+    for (let j = 0; j < dotLiEllist.length; j++) {
+      let itemEl = dotLiEllist[j]
+      itemEl.className = 'un-active'
+    }
+    if (currentIndex >= dotLiEllist.length) {
+      // 如果是最后一个克隆的照片则默认指示点是第一个
+      dotLiEllist[0].className = 'active'
+    } else {
+      dotLiEllist[currentIndex].className = 'active'
+    }
+  }
+  //   第一个设置原点激活样式
+  currentIndex = 0
+  changeDot()
+  //   指示点添加点击事件
+  for (let i = 0; i < dotLiEllist.length; i++) {
+    let elI = dotLiEllist[i]
+    elI.addEventListener('click', () => {
+      // 修改当前状态
+      currentIndex = i
+      //修改dot状态
+      changeDot()
+      // 计算需要移动的距离
+      let distance = -picWidth * i
+      console.log(distance)
+      animate(imgUlEl, distance, timeGap, allTime)
+    })
+  }
+  //   鼠标移动去除自动播放
+  ulBox.addEventListener('mouseover', () => {
+    console.log('mouseover')
+    if (playTimer) {
+      clearTimeout(playTimer)
+    }
+  })
+  //   鼠标移除自动播放
+  ulBox.addEventListener('mouseleave', () => {
+    console.log('mouseleave')
+    autoPlay()
+  })
+
+  // 自动播放图片
+  function autoPlay() {
+    playTimer = setTimeout(() => {
+      if (currentIndex == dotLiEllist.length) {
+        currentIndex = 0
+        imgUlEl.style.left = 0
+      }
+      currentIndex++
+      //判断是否是最后一个图片
+      animate(imgUlEl, -picWidth * currentIndex, timeGap, allTime, () => {
+        //修改dot状态
+        changeDot()
+        if (playTimer) {
+          clearTimeout(playTimer)
+        }
+        autoPlay()
+      })
+    }, palyTime)
+  }
+  //调用自动播放
+  autoPlay()
+  // 按钮添加点击事件
+  let btnLeft = document.getElementById('left-btn')
+  let btnRight = document.getElementById('right-btn')
+  btnLeft.style.cursor = 'grab'
+  btnRight.style.cursor = 'grab'
+  btnLeft.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--
+      animate(imgUlEl, -picWidth * currentIndex, timeGap, allTime)
+      changeDot()
+    }
+  })
+  btnRight.addEventListener('click', () => {
+    // 滑动到最后一个克隆的照片
+    if (currentIndex == dotLiEllist.length) {
+      currentIndex = 1
+      imgUlEl.style.left = 0
+    } else {
+      currentIndex++
+    }
+    animate(imgUlEl, -picWidth * currentIndex, timeGap, allTime)
+    changeDot()
+  })
+})
+
+// 给元素添加动画效果
+// targetPosition 目标位置
+// timeGap 每次移动时间间隔
+// allTime 花费多久移动完
+// callBack 回调函数
+function animate(el, targetPosition, timeGap = 100, allTime = 1000, callBack) {
+  let offsetX = el.offsetLeft
+  //需要移动位置
+  let distance = targetPosition - offsetX
+  //   每隔一段时间移动一段距离
+  let moveCount = allTime / timeGap // 总共移动多少次
+  let moveDistance = distance / moveCount //每次移动多少距离
+  let timer = setInterval(() => {
+    // console.log(moveCount, moveDistance)
+    offsetX = el.offsetLeft //相对父元素的距离
+    el.style.left = offsetX + moveDistance + 'px'
+    moveCount-- //移动次数减少
+    distance = distance - moveDistance //总共需要移动的距离
+    if (moveCount <= 0) {
+      //防止没有计算完
+      el.style.left = targetPosition + 'px'
+      // 执行回调
+      callBack ? callBack() : ''
+      clearInterval(timer)
+    }
+  }, timeGap)
+}
+
+
+</script>
+</html>

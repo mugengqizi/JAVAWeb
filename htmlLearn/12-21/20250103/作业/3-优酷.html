@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        html{background-color: #16161a;}
+        /* 原子类 */
+        .mr_auto{margin-right: auto;}
+        .mb10{margin-bottom: 10px;}
+    </style>
+</head>
+<body>
+    <style>
+        main{width: 1000px;margin: 30px auto;height: 100px;}
+        main a{text-decoration: none;}
+        main nav{display: flex;align-items: center;}
+        main nav h2{color: white;}
+        main nav a{color: #777779;margin-left: 10px;}
+        main nav a.active{color: white;}
+        main nav img{background-color: #2e2e31;padding: 0 5px;cursor: pointer;}
+        main nav img:hover{opacity: 0.8;}
+        main nav span{background-color: #2e2e31;margin: 0 1px;height: 34px;color: white;line-height: 34px;padding: 0 5px;}
+        main nav img.leftBtn{border-radius: 5px 0 0 5px;}
+        main nav img.rightBtn{border-radius: 0 5px 5px 0;}
+    </style>
+    <main>
+        <nav class="mb10">
+            <h2>电视剧</h2>
+            <a class="active" href="#">最新</a>
+            <a href="#">内地剧</a>
+            <a class="mr_auto" href="#">港台剧</a>
+            <img class="leftBtn" src="./imgs/left-icon.jpg" alt="">
+            <span>1/2</span>
+            <img class="rightBtn" src="./imgs/right-icon.jpg" alt="">
+        </nav>
+        <style>
+            main .videos{display: flex;justify-content: space-between;}
+            main .videos>a{width: 320px;flex-shrink: 0;background-color: #25252b;}
+            main .videos a{color: white;}
+            main .videos a div{position: relative;}
+            main .videos a div span{position: absolute;right: 4px;bottom: 5px;font-size: 14px;}
+            main .videos a img{max-width: 100%;border-radius: 2px;}
+            main .videos h3{font-weight: normal;}
+            main .videos p{color: #777779;font-size: 14px;}
+            main .videos p.info{font-size: 13px;margin-top: 5px;}
+        </style>
+        <div class="videos">
+            <a href="#">
+                <div>
+                    <img src="./imgs/img1.jpg" alt="">
+                    <span>限免5集</span>
+                </div>
+                
+                <h3>朱利安榆木</h3>
+                <p>你是谁？大家后</p>
+                <p class="info">中国 2024 古装</p>
+            </a>
+            <style>
+                main ul{flex-grow: 1;display: flex;justify-content: space-around;flex-wrap: wrap;}
+                main ul a{width: 23%;}
+            </style>
+            <ul>
+                <a href="#">
+                    <div>
+                        <img src="./imgs/img2.jpg" alt="">
+                        <span>23集全</span>
+                    </div>
+                    <h3>朱利安榆木</h3>
+                    <p>你是谁？大家后</p>
+                </a>
+                <a href="#">
+                    <div>
+                        <img src="./imgs/img2.jpg" alt="">
+                        <span>23集全</span>
+                    </div>
+                    <h3>朱利安榆木</h3>
+                    <p>你是谁？大家后</p>
+                </a>
+                <a href="#">
+                    <div>
+                        <img src="./imgs/img2.jpg" alt="">
+                        <span>23集全</span>
+                    </div>
+                    <h3>朱利安榆木</h3>
+                    <p>你是谁？大家后</p>
+                </a>
+                <a href="#">
+                    <div>
+                        <img src="./imgs/img2.jpg" alt="">
+                        <span>23集全</span>
+                    </div>
+                    <h3>朱利安榆木</h3>
+                    <p>你是谁？大家后</p>
+                </a>
+                <a href="#">
+                    <div>
+                        <img src="./imgs/img2.jpg" alt="">
+                        <span>23集全</span>
+                    </div>
+                    <h3>朱利安榆木</h3>
+                    <p>你是谁？大家后</p>
+                </a>
+                <a href="#">
+                    <div>
+                        <img src="./imgs/img2.jpg" alt="">
+                        <span>23集全</span>
+                    </div>
+                    <h3>朱利安榆木</h3>
+                    <p>你是谁？大家后</p>
+                </a>
+                <a href="#">
+                    <div>
+                        <img src="./imgs/img2.jpg" alt="">
+                        <span>23集全</span>
+                    </div>
+                    <h3>朱利安榆木</h3>
+                    <p>你是谁？大家后</p>
+                </a>
+                <a href="#">
+                    <div>
+                        <img src="./imgs/img2.jpg" alt="">
+                        <span>23集全</span>
+                    </div>
+                    <h3>朱利安榆木</h3>
+                    <p>你是谁？大家后</p>
+                </a>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn1">Click me!</button>
+  <button id="btn2">你愁啥</button>
+  <select onchange="changeSelect(this)">
+    <option value="A">选项一</option>
+    <option value="B">选项二</option>
+    <option value="C">选项三</option>
+  </select>
+  <input type="text"   onfocus="good()" onblur="sayGood()">
+</body>
+<script>
+  let btn1=document.getElementById("btn1");
+  btn1.onclick=function(){
+    alert("Hello, world!");
+    btn1.onclick=null;
+  }
+  let btn2=document.getElementById("btn2");
+  function sayHello(){
+    alert("瞅你咋地");
+    btn2.removeEventListener("click",sayHello);
+  }
+  btn2.addEventListener("click",sayHello);
+  function changeSelect(th){
+    alert("你选择了"+th.value)
+  }
+  function good(){
+    console.log("你好棒");
+  }
+  function sayGood(){
+    console.log("ok");
+  }
+</script>
+</html>

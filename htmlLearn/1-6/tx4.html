@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="shuru()">输入</button>
+  <div id="time">
+
+  </div>
+  <button onclick="guan()">停止</button>
+</body>
+<script>
+  function shuru() {
+    alert(prompt("请输入："))
+  }
+  function showTime() {
+    let ti=new Date();
+    document.getElementById("time").innerHTML=ti;
+  }
+  
+  function guan() {
+    clearInterval(timer);
+  }
+  setTimeout(setInterval(showTime,1000),5000)
+</script>
+</html>

@@ -1,0 +1,26 @@
+/* header */
+header{padding: 20px;}
+header a{color: black;text-decoration: none;margin-right: 20px;}
+header a:hover{color: blue;}
+header button{background-color: blue;color: white;cursor: pointer;border: 0;padding: 3px 6px;border-radius: 3px;}
+header button:hover{background-color: rgb(193, 193, 237);}
+.logo img{height: 130px;}
+.search{width: 650px;margin: 0 auto 30px auto;display: flex;}
+.search .form{position: relative;}
+.search input{width: 540px;height: 40px;border: 2px solid #c4c7ce;padding: 0 15px;box-sizing: border-box;border-radius: 10px 0 0 10px;border-right: 0;outline: none;}
+.search button{flex-grow: 1;border: 0;border-radius: 0 10px 10px 0;background-color: blue;color: white;}
+.search span{position: absolute;right: 16px;top: 8px;height: 23px;width: 23px;background-image: url(../../imgs/camera-icons.png);background-position: 0 -48px;cursor: pointer;}
+.search span:hover{background-position: 0 -72px;}
+.ai a{background-color: #e9f0ff;padding: 10px;border-radius: 1000px;text-decoration: none;color: black;}
+.ai a :nth-child(1){position: relative;top: -3px;}
+.ai a :nth-child(2){padding: 3px 2px;background-color: #d6dcff;border-radius: 50%;}
+.ai img{vertical-align: middle;}
+main{display: flex;justify-content: space-between;width: 660px;margin: 0 auto;}
+main h2{font-size: 16px;margin-bottom: 10px;}
+main h2 img{vertical-align: middle;position: relative;top: -3px;}
+main ul li{margin-bottom: 15px;}
+main a{text-decoration: none;color: black;}
+main a:hover{text-decoration: underline;color: blue;}
+main  i{font-style: normal;background-color: orange;color: white;font-size: 12px;padding: 0 2px;border-radius: 3px;}
+footer{width: 100%;left: 0;bottom: 0;padding: 10px 0;}
+footer a{margin: 0 5px;}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let f1 = function(){
+            // 伪数组
+            console.log(arguments);
+        }
+        f1(3,5)
+        console.log('=========');
+        let f2 = function(a,b){
+            // console.log(a+b);
+            console.log('a',a);
+            console.log('b',b);
+        }
+        f2([1,3])
+        f2(...[1,3])
+        f2(1,3)
+        console.log('==展开数组，合并数组==');
+        let arr1 = [1,2];
+        let arr2 = [7,8];
+        let arr3 = [
+            ...arr1,
+            ...arr2,
+            'aa','bb',
+            ...arr2
+        ]
+        console.log('arr3',arr3);
+        console.log('===展开对象==');
+        //默认参数
+        let obj1 = {
+            age:3,
+            num:6
+        }
+        //自定义参数
+        let obj2 = {
+            aa:6,
+            bb:9,
+            age:300
+        }
+        let obj3 = {
+            ...obj1,
+            ...obj2
+        }
+        console.log(obj3);
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [
+            {name:'鲁迅1',score:67},
+            {name:'鲁迅2',score:22},
+            {name:'鲁迅5',score:11},
+            {name:'鲁迅d',score:99}
+        ]
+        var sum = 0;
+        // arr.forEach(el=>{
+        //     sum += el.score;
+        // })
+        arr.forEach(el=>sum += el.score);
+        console.log(sum);
+    </script>
+    <script>
+        console.log('==forin==');
+        // for (const a in arr) {
+        //     console.log(a);
+        // }
+
+        var arr100 = [33,'mm',99];
+        console.log(arr100.keys());
+        console.log(arr100.values());
+
+    </script>
+    <script>
+        function f1(a,b){
+            // undefined,undefined
+            // 
+            //默认值
+            a = a?a:100
+            console.log(a,b);
+        }
+
+        f1();
+        f1('aa',9)
+        f1(0,9) //0 100
+    </script>
+    <script>
+        function f100(a, b=2){
+            console.log(a,b);
+        }
+        f100() //2
+        f100(2) //2
+        f100(2,4)  //4
+
+
+        function f200(a,a){
+            console.log(a,a);
+        }
+        f200(1,4)
+
+        let f300 = (a,a)=>{
+            console.log('f300',a);
+        }
+
+    </script>
+</body>
+</html>

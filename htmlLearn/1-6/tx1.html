@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="checkbox" class="checkbox1" value="red">唱
+  <input type="checkbox" class="checkbox1" value="blue">跳
+  <input type="checkbox" class="checkbox1" value="green">rap
+  <input type="checkbox" class="checkbox1" value="yellow">篮球
+  <button onclick="selectAll()">全选</button>
+  <button onclick="selectReverse()">反选</button>
+  <button onclick="unselectAll()">全不选</button>
+</body>
+<script>
+  function selectAll() {
+    let checkboxs = document.querySelectorAll('.checkbox1')
+    for(let i=0;i<checkboxs.length;i++){
+      checkboxs[i].checked = true;
+    }
+  }
+  function selectReverse() {
+    let checkboxs = document.querySelectorAll('.checkbox1')
+    for(let i=0;i<checkboxs.length;i++){
+      checkboxs[i].checked = !checkboxs[i].checked;
+    }
+  }
+  function unselectAll() {
+    let checkboxs = document.querySelectorAll('.checkbox1')
+    for(let i=0;i<checkboxs.length;i++){
+      checkboxs[i].checked = false;
+    }
+  }
+</script>
+</html>

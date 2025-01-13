@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;   
+            text-decoration: none;    
+        }
+        .head{
+            display: flex;
+            justify-content:space-between;
+            margin-top: 20px;
+        }
+        .head-left ul{
+            display: flex;           
+        }
+        .head-left ul li{
+           margin-left: 30px;
+        }
+        .head-left ul li a{
+            color: black;
+        }
+        .head-right ul{
+            display: flex;           
+        }
+        .head-right ul li{
+            margin-right: 20px;
+           
+        }
+       
+        .head-right button{
+            width: 50px;
+            height: 30px;
+            margin-right: 20px;
+            background-color:#4E6EF2;
+            margin-top: -3px;
+            border-radius: 15%;
+            color: white;
+        }
+        .head-left ul li a:hover{
+            color: #4E6EF2;
+        }
+        .head-right ul li a:hover{
+            color: #4E6EF2;
+        }
+        .head-right button:hover{
+            background-color: #4E6EF2;
+        }
+        .tbody{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tbody{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .search{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .search input{
+            width: 500px;
+            height: 40px;
+            border-radius: 8px 0 0 8px;
+        }
+        .search button{
+            width: 100px;
+            height: 45px;
+            border-radius: 0 8px 8px 0;
+            margin-left: -6px;
+            background-color:#4E6EF2;
+            color: white;
+            position: relative;
+           
+        }
+        .ai{
+            width: 260px;
+            height: 40px;
+            margin-top: 10px;
+            color: black;
+            display: flex;
+            position: absolute;
+            margin-top: 200px;
+            border: 2px solid white;
+            font-size: 17px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            background-color: #E7ECFA;
+        }
+        .ai span{
+            color: #4E6EF2;
+            font-size: 30px;
+            margin-left: 10px;
+            
+        }
+        .foot{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 150px;
+        }
+        .top{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .top h3{
+            margin-right: 500px;
+        }
+        .top p{
+            color: #4E6EF2;
+        }
+        .bottom{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+        .bottom-left{
+            margin-right: 100px;
+        }
+        .bottom-left ul{
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-left: 220px;
+        }
+        .bottom-left ul li{
+            margin-bottom: 20px;
+        }
+        .bottom-left ul li a{
+            color: black;
+        }
+        .bottom-left ul li a:hover{
+            color: #4E6EF2;
+        }
+        .bottom-right ul{
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+        .bottom-right ul li{
+            margin-bottom: 20px;
+        }
+        .bottom-right ul li a{
+            color: black;
+        }
+        .bottom-right ul li a:hover{
+            color: #4E6EF2;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+         <div class="head">
+           <div class="head-left">
+            <ul>
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">hao123</a></li>
+                <li><a href="#">地图</a></li>
+                <li><a href="#">视频</a></li>
+                <li><a href="#">贴吧</a></li>
+                <li><a href="#">图片</a></li>
+                <li><a href="#">网盘</a></li>
+                <li><a href="#">文库</a></li>
+                <li><a href="#" style="color: #4E6EF2;">Ai搜</a></li>
+                <li><a href="#">更多</a></li>
+            </ul>
+           </div>
+           <div class="head-right">
+                <ul>
+                    <li><a href="#">设置</a></li>
+                    <button>登录</button>
+                </ul>
+           </div>
+        </div>
+
+        <div class="tbody">
+            <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="" style="width: 350px;">
+            <div class="search">
+                <input type="text">
+                <button>百度一下</button>
+                <div class="ai">即可体验百度Ai搜索<span>➮</span></div>
+        </div>
+    </div> 
+           <div class="foot">
+            <div class="top">
+                <h3>百度热搜 ></h3>
+                <p>🤡换一换</p>
+            </div>
+            <div class="bottom">
+                <div class="bottom-left">
+                    <ul>
+                        <li><a href="#"><span style="color: orange;">⤒.</span> 2024，习近平的出访故事</a></li>
+                        <li><a href="#"><span style="color: orange;">2.</span> 2023东三省卷疯了 铁锅炖都有自助了&nbsp;<span style="background-color: orange;">热</span></a></li>
+                        <li><a href="#"><span style="color: orange;">3.</span> 2023十大网络流行语公布 &nbsp;<span style="background-color: orange;">热</span></a></li>
+                        <li><a href="#"><span style="color: orange;">4.</span> 天南地北过新年</a></li>
+                        <li><a href="#">5. 张颂文刘学义被税务局约谈&nbsp;<span style="background-color: orange;">热</span></a></li>
+                    </ul>
+                </div>
+                <div class="bottom-right">
+                    <ul>
+                        <li><a href="#">6. 于正和赵露思聊了一个多小时</a></li>
+                        <li><a href="#">7. 2024属于你的关键词</a></li>
+                        <li><a href="#">8. 88爷爷当吃播后秒变18岁</a></li>
+                        <li><a href="#">9. 六旬阿姨患重度抑郁后穷游8年成功戒药值得佩服</a></li>
+                        <li><a href="#">10.2023十大网络流行语公布</a></li>
+                    </ul>
+                </div>
+            </div>          
+        </div>               
+    </div>
+</body>
+</html>

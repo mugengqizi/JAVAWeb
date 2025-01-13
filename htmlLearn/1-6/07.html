@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hello world</title>
+</head>
+<body>
+  <button id="btn1">btn</button>
+  <select name="select1" id="s1">
+    <option id="o1" value="1" >星期一</option>
+    <option value="2">星期二</option>
+    <option value="3">星期三</option>
+    <option value="4">星期四</option>
+  </select>
+</body>
+<script>
+  btn1.addEventListener('click', function() {
+    alert(document.title);
+    alert(document.URL);
+    alert(document.cookie);
+    document.cookie = innerHTML;
+  })
+
+  let ar=document.getElementById('o1').innerHTML
+  alert(ar)
+  let arr=document.querySelectorAll("#s1 option")
+  for(let i=0;i<arr.length;i++){
+    alert(arr[i].innerHTML)
+  }
+</script>
+</html>

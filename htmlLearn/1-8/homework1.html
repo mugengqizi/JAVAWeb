@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!-- 页面上有个小球，按下键盘的上下左右键，控制小球的移动 -->
+<style>
+  .cir {
+    width: 50px;
+    height: 50px;
+    border: black 1px solid;
+    border-radius: 50%;
+    background-color: #f00;
+  }
+</style>
+<body>
+  <div style="width: 1000px;height: 300px;">
+    <div class="cir" id="circle">
+
+    </div>
+  </div>
+</body>
+<script>
+  let position = { x: 0, y: 0 }; 
+  const ball = document.getElementById('circle');  
+  document.addEventListener("keydown", function(event) {
+    switch(event.key) {  
+                case 'ArrowUp':  
+                    position.y -= 10; // 向上移动  
+                    break;  
+                case 'ArrowDown':  
+                    position.y += 10; // 向下移动  
+                    break;  
+                case 'ArrowLeft':  
+                    position.x -= 10; // 向左移动  
+                    break;  
+                case 'ArrowRight':  
+                    position.x += 10; // 向右移动  
+                    break;  
+            }  
+            ball.style.transform = `translate(${position.x}px, ${position.y}px)`;
+          }
+);
+</script>
+</html>

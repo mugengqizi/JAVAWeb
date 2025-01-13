@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [2,4,6]
+        console.log(typeof arr);
+        console.log(typeof {});
+
+        console.log(Array.isArray(arr));//true
+        console.log(Array.isArray({}));//false
+    </script>
+    <script>
+        console.log("==伪数组===");
+        console.log([1,3,5]);
+
+        var arr_ = {
+            0:'aa',
+            1:55,
+            2:77,
+            length:3
+        }
+        console.log(arr_);
+
+        var arr2 = Array.from(arr_)
+        console.log(arr2);
+    </script>
+    <script>
+        var scoreArr = [77,66,23,88];
+        //循环
+        var index = scoreArr.findIndex(function(item){
+            console.log(item);
+            if(item<60){
+                return true;
+            }
+        })
+        console.log('index',index);
+
+        console.log('==不及格成绩==');
+        //el
+        var score = scoreArr.find(el=>el<60);
+        console.log('score',score);
+    </script>
+    <script>
+        console.log("==过滤===");
+        let ageArr = [23,77,33,88];
+        let newArr = ageArr.filter(el=>el>60);
+        console.log(newArr);
+    </script>
+</body>
+</html>

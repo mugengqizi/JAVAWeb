@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <select name="sexs">
+    <option value="-1">性别</option>
+    <option value="0" selected>男</option>
+    <option value="1">女</option>
+    <option value="2">其他</option>
+    </select>
+</body>
+<script>
+  let a1=(a,b)=>a+b
+  let obj1={
+    name:'huashan',
+    age:25,
+    sayhello:function(){
+      console.log('hello '+this.name)
+    }
+  }
+  let obj2={
+    id:2
+
+  }
+  let obj3={
+    ...obj1,
+    ...obj2
+  }
+  obj1.sayhello()
+  obj3.sayhello()
+</script>
+</html>

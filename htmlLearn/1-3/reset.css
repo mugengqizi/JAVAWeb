@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* 解决子元素浮动后 父元素高度无法支撑的问题!! */
+.cf::after{
+    content: "";
+    clear: both;
+    display: block;
+}

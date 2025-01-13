@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="handleClick()">Click me</button>
+  <button id="dou">双击我</button>
+  <button onclick="shuru()">输入框</button>
+  <button id="shuchu">输出内容</button>
+  <button id="btn2">多个监听事件</button>
+</body>
+<script>
+  function handleClick() {
+    alert("你看尼玛呢！")
+  }
+  let dou=document.getElementById("dou")
+  dou.ondblclick=()=>{
+    alert("你双击尼玛呢！")
+  }
+  let ad="null"
+  function shuru(){
+    ad=prompt("请输入内容：")
+  }
+  let shuchu=document.getElementById("shuchu")
+  shuchu.ondblclick=bt3
+  function bt3(){
+    alert(ad)
+  }
+  let btn2=document.getElementById("btn2")
+  btn2.addEventListener("click",handleClick)
+  btn2.addEventListener("click",shuru)
+  btn2.addEventListener("click",bt3)
+
+</script>
+</html>

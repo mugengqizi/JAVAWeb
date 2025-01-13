@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  let obj={
+    "un-name":"liu",
+    age:18,
+    sex:"male",
+    "say-Hello": function(){
+      console.log("Hello,I am "+this["un-name"]);
+    }
+  }
+  console.log(obj["un-name"]);
+  obj["say-Hello"]();
+  for(let key in obj){
+    console.log(key+":"+obj[key]);
+    
+  }
+</script>
+</html>

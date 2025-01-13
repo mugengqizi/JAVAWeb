@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS表单验证</title>
+<style>
+div{
+width: 500px;
+height: 500px;
+border: 1px solid black;
+}
+img{
+width: 50px;
+height: 50px;
+position: absolute;
+left: 0;
+top: 0;
+}
+</style>
+</head>
+<body>
+<div id="div">
+<img id="image" src="https://www.w3school.com.cn/i/eg_smile.gif" alt="鼠标移动到此处">
+</div>
+</body>
+<script>
+  var image = document.getElementById("image");
+var div = document.getElementById("div");
+window.onmousemove = function(e){
+if(e.clientX>10 && e.clientX<460 && e.clientY>10 &&
+e.clientY<460){
+image.style.left= e.clientX-25+"px";
+image.style.top= e.clientY-25+"px";
+}
+}
+</script>
+</html>

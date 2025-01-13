@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // f1();
+        //变量定义
+        var f1 = function(){
+            console.log("i am f1");
+        }
+        f1();
+        console.log("=====");
+
+        var age = 7;
+
+        // 立即执行函数，匿名
+        // 减少变量污染
+        // js，全局变量是魔鬼
+        (function(){
+            var blood = 100;
+            console.log(111);
+        }())
+    </script>
+</body>
+</html>
